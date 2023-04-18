@@ -17,6 +17,6 @@ public class CityEntity extends Auditable {
     
     private String name;
     
-    @OneToMany
+    @OneToMany(mappedBy = "city")
     private List<TheatreEntity> theatres;
 }

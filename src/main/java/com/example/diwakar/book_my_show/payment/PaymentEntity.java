@@ -4,7 +4,10 @@ import java.util.Date;
 
 import com.example.diwakar.book_my_show.commons.Auditable;
 
+import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.Setter;
@@ -13,13 +16,13 @@ import lombok.Setter;
 @Setter
 @Entity(name = "payments")
 public class PaymentEntity extends Auditable {
-    @ManyToOne
+    @Enumerated(EnumType.STRING)
     private PaymentMethod method;
     private Date paymentDate;
     private double amount;
     private String transactionId;
 
-    @ManyToOne
+    @Enumerated(EnumType.STRING)
     private PaymentStatus paymentStatus;
 
     @ManyToOne

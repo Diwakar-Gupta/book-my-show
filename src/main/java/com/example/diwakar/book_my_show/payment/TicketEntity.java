@@ -9,6 +9,8 @@ import com.example.diwakar.book_my_show.show.ShowSeatEntity;
 import com.example.diwakar.book_my_show.user.UserEntity;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
@@ -26,7 +28,8 @@ public class TicketEntity extends Auditable{
     @ManyToMany
     private List<ShowSeatEntity> showSeats;
     private Date timeOfBooking;
-    @ManyToOne
+    
+    @Enumerated(EnumType.STRING)
     private TicketStatus status;
 
     @OneToMany(mappedBy = "ticket")

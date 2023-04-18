@@ -6,7 +6,10 @@ import com.example.diwakar.book_my_show.actor.ActorEntity;
 import com.example.diwakar.book_my_show.commons.Auditable;
 import com.example.diwakar.book_my_show.commons.Feature;
 
+import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.ManyToMany;
 import lombok.Getter;
 import lombok.Setter;
@@ -20,8 +23,10 @@ public class MovieEntity extends Auditable {
     @ManyToMany
     private List<ActorEntity> actors;
 
-    @ManyToMany
+    @ElementCollection
+    @Enumerated(EnumType.STRING)
     private List<Feature> features;
-    @ManyToMany
+    @ElementCollection
+    @Enumerated(EnumType.STRING)
     private List<Genre> genres;
 }

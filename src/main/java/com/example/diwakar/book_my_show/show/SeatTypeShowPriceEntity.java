@@ -19,7 +19,6 @@ public class SeatTypeShowPriceEntity extends Auditable{
     private ShowEntity show;
     private int price;
     
-    @ManyToOne
     @Enumerated(EnumType.STRING)
     private SeatType seatType;
 }
