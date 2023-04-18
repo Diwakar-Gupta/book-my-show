@@ -3,7 +3,6 @@ package com.example.diwakar.book_my_show.show;
 import com.example.diwakar.book_my_show.commons.Auditable;
 import com.example.diwakar.book_my_show.seat.SeatEntity;
 
-import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
