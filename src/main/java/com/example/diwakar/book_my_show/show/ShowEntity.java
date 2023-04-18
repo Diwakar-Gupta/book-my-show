@@ -9,6 +9,8 @@ import com.example.diwakar.book_my_show.commons.Feature;
 import com.example.diwakar.book_my_show.movie.MovieEntity;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,9 +18,12 @@ import lombok.Setter;
 @Setter
 @Entity(name = "shows")
 public class ShowEntity extends Auditable {
+    @ManyToOne
     private MovieEntity movie;
     private Date startTime;
     private Date endTime;
+    @ManyToOne
     private AuditoriumEntity auditorium;
+    @ManyToMany
     private List<Feature> features;
 }
