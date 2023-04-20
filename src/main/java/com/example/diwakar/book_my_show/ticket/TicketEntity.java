@@ -1,9 +1,10 @@
-package com.example.diwakar.book_my_show.payment;
+package com.example.diwakar.book_my_show.ticket;
 
 import java.util.Date;
 import java.util.List;
 
 import com.example.diwakar.book_my_show.commons.Auditable;
+import com.example.diwakar.book_my_show.payment.PaymentEntity;
 import com.example.diwakar.book_my_show.show.ShowEntity;
 import com.example.diwakar.book_my_show.show.ShowSeatEntity;
 import com.example.diwakar.book_my_show.user.UserEntity;

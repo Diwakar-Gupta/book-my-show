@@ -3,6 +3,7 @@ package com.example.diwakar.book_my_show.payment;
 import java.util.Date;
 
 import com.example.diwakar.book_my_show.commons.Auditable;
+import com.example.diwakar.book_my_show.ticket.TicketEntity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
